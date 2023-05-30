@@ -1,0 +1,224 @@
+@charset "UTF-8";
+*:focus {
+  outline: none !important;
+}
+
+body {
+  background-color: #C8C2AA;
+  background-size: 4px 4px;
+  background-image: linear-gradient(90deg, transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px), linear-gradient(transparent, transparent 3px, rgba(0, 0, 0, 0.07) 4px);
+  color: #4D493E;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  min-height: 100vh;
+  box-shadow: inset 0 0 150px rgba(77, 73, 62, 0.4), inset 0 0 150px rgba(77, 73, 62, 0.3);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  letter-spacing: 0.1rem;
+}
+
+  header {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #000000;
+    color: white;
+    position:relative;
+    box-shadow: 2px 2px 1px #ffa600;
+  }
+  header .headline{
+      line-height: 50px;
+      text-align: center;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      float: left;
+      font-size: 30px;
+      margin-left: 40px;
+  }
+
+  header .usermsg{
+    position: absolute;
+    left: 200px;
+    bottom: -9px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  header #title{
+    position: absolute;
+    left: 20px;
+    top: 1px;
+  }
+
+  header .btn{
+    position: absolute; /*追記*/
+    right: 15px;
+}
+
+    .btn--grey,
+a.btn--grey {
+  color: #fff;
+  background-color: #363636;
+}
+
+.btn--grey:hover,
+a.btn--grey:hover {
+  color: #fff;
+  background: #d87e3e;
+}
+
+a.btn--radius {
+   border-radius: 45px;
+}
+
+.square{
+  position: relative;
+  background-color: #f5eedb;
+  width: 550px;
+  height: 150px;
+  top: 435px;
+  right: -15px;
+  box-shadow: 2px 2px 1px 1px #6f6f6f;
+}
+
+.square_head{
+  position:absolute;
+  background-color:#4c483d;
+  width: 550px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+#head_text{
+  z-index: 100;
+  position: absolute;
+  color: #f5eedb;
+  left: 5px;
+}
+
+.input_name{
+  position:absolute;
+  top: 27px;
+  left: 7px;
+}
+
+.input_desc{
+  position: absolute;
+  top: 60px;
+  left: 7px;
+  resize: none;
+  border: 2px solid rgb(77, 77, 77);  /* 枠線 */
+  border-radius: 0.67em;   /* 角丸 */
+  padding: 0.5em;          /* 内側の余白量 */
+  background-color: snow;  /* 背景色 */
+  font-size: 0.7em;          /* 文字サイズ */
+  line-height: 1.2;        /* 行の高さ */
+  outline: none;
+}
+
+#selc{
+  position:absolute;
+  top: 27px;
+  right: 170px;
+  border-radius: 0.67em;   /* 角丸 */
+  border: 1px solid rgb(77, 77, 77);
+  background-color: rgba(98, 98, 98,0.3);
+}
+
+
+#del{
+  position:absolute;
+  bottom: 60px;
+  right: 15px;
+}
+
+#add{
+  position:absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+/* テーブル関連 */
+.item_table{
+  overflow:auto;
+  height: 400px;
+  margin-left: 15px;
+  margin-top: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#sort_table {
+    border-collapse:collapse;
+    box-shadow: 2px 2px 1px 1px #6f6f6f;
+}
+
+#sort_table td {
+    border:0px;
+    font-family:fantasy;
+    text-align: left;
+}
+#sort_table th {
+    position: sticky;
+    cursor:pointer;
+    background-color:#4c483d;
+    color: #f5eedb;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sort_table tr {
+  background-color: #f5eedb;
+  color:#4c483d;
+  font-family:fantasy
+}
+
+
+button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  padding: 0.4rem 1rem;
+  background-color: rgba(77, 73, 62, 0.35);
+  color: #4D493E;
+  box-sizing: content-box;
+  position: relative;
+  border: 1px solid transparent;
+  border-left: none;
+  border-right: none;
+}
+button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 0;
+  background-color: #4D493E;
+  transition: width 0.2s;
+}
+button::after {
+  content: "";
+  display: none;
+  position: absolute;
+  background: #4D493E;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+}
+button:hover, button:focus {
+  background-color: transparent;
+  color: #C8C2AA;
+  border-color: #4D493E;
+}
+button:hover::before, button:focus::before {
+  width: 100%;
+}
+
+
